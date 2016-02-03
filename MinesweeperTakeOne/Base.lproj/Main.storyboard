@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iNy-gK-fiQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--High Score View Controller-->
+        <scene sceneID="fDJ-Nn-dLE">
+            <objects>
+                <tableViewController id="iBE-CA-Ydf" customClass="HighScoreViewController" customModule="MinesweeperTakeOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IX2-hX-8Ke">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.070236308710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="iBE-CA-Ydf" id="2L7-OG-hVh"/>
+                            <outlet property="delegate" destination="iBE-CA-Ydf" id="o9q-Ea-K5Y"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhy-Cn-jal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="-252"/>
+        </scene>
+        <!--Level View Controller-->
+        <scene sceneID="5A6-lt-2a2">
+            <objects>
+                <tableViewController id="ZkP-dJ-80S" customClass="LevelViewController" customModule="MinesweeperTakeOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lam-Yd-WsT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZkP-dJ-80S" id="jxR-MN-IhA"/>
+                            <outlet property="delegate" destination="ZkP-dJ-80S" id="hdJ-3m-TdF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bs6-9O-rec">
+                        <barButtonItem key="leftBarButtonItem" title="High Scores" id="cBu-N8-oCg">
+                            <connections>
+                                <segue destination="iBE-CA-Ydf" kind="show" identifier="HighScoreSegueIdentifier" id="UWs-eH-cSe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gn8-nv-KUc">
+                            <connections>
+                                <action selector="addGameType:" destination="ZkP-dJ-80S" id="dkE-F6-Opl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="mTF-qD-Scn" kind="show" identifier="BoardSegue" id="SLo-i8-gfo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0H-CF-XNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="520"/>
+        </scene>
+        <!--Board View Controller-->
+        <scene sceneID="sn5-pW-eaz">
+            <objects>
+                <viewController id="mTF-qD-Scn" customClass="BoardViewController" customModule="MinesweeperTakeOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iy7-io-IIM"/>
+                        <viewControllerLayoutGuide type="bottom" id="YC2-lu-6d8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cFk-c7-F16">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcP-kp-kvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="520"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iS2-9k-rdz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iNy-gK-fiQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fwq-ID-bNM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZkP-dJ-80S" kind="relationship" relationship="rootViewController" id="NUX-PT-xLY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hye-Cx-Bkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="520"/>
+        </scene>
+    </scenes>
+</document>

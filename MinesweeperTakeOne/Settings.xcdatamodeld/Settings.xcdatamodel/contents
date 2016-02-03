@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Xcode 7.0">
+    <entity name="BoardTypes" syncable="YES">
+        <attribute name="bombs" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="columns" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rows" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="high_scores" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HighScores" inverseName="board_type" inverseEntity="HighScores" syncable="YES"/>
+    </entity>
+    <entity name="HighScores" syncable="YES">
+        <attribute name="player_name" attributeType="String" syncable="YES"/>
+        <attribute name="time" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="board_type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BoardTypes" inverseName="high_scores" inverseEntity="BoardTypes" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BoardTypes" positionX="36" positionY="-210" width="128" height="118"/>
+        <element name="HighScores" positionX="331" positionY="-27" width="128" height="88"/>
+    </elements>
+</model>
