@@ -22,10 +22,7 @@ class BoardViewController: UIViewController {
     var confirmResetAlert = UIAlertController(title: "Reset Board", message: "Are you sure you want to reset the board? You will lose all progress in your current game.", preferredStyle: UIAlertControllerStyle.Alert)
     
     // Board specific data, defined by parent view
-    var boardName: String!
-    var countRows: Int!
-    var countCols: Int!
-    var countBombs: Int!
+    var chosenBoardSetting: BoardSetting!
     var gameActive = false
     var theBoard: Board! // Minesweeper class used to set bombs and grid values
     var buttonArray = [[SquareButton]]() // The array of grid squares
@@ -57,7 +54,7 @@ class BoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = boardName
+        title = chosenBoardSetting.boardName
         buildNewBoard()
         
         // Define the one second timer to manage the clock
@@ -73,7 +70,7 @@ class BoardViewController: UIViewController {
         
         // Display bomb count
         bombCounter.frame.origin = CGPoint(x: 10, y: view.frame.height - 30)
-        bombCounter.text = "Bombs: \(countBombs)"
+        bombCounter.text = "Bombs: \(chosenBoardSetting.bombCount)"
         bombCounter.sizeToFit()
         
         // Display count of flags placed
@@ -125,7 +122,7 @@ class BoardViewController: UIViewController {
     
     func buildNewBoard() {
         // Build the board and the UI
-        theBoard = Board(width: countCols, height: countRows, bombs: countBombs)
+        theBoard = Board(width: chosenBoardSetting.boardWidth, height: chosenBoardSetting.boardHeight, bombs: chosenBoardSetting.bombCount)
         setUpGrid()
         view.bringSubviewToFront(theFlag)
         gameActive = true
@@ -189,12 +186,12 @@ class BoardViewController: UIViewController {
     // Builds the board, returns width of each grid object
     func setUpGrid() {
         // Determine width of each square in the grid
-        let squareWidth = Int(view.frame.width)/countCols
+        let squareWidth = Int(view.frame.width)/chosenBoardSetting.boardWidth
 
         // For each item in the grid, create a new gridSquare
-        for row in 0..<countRows {
+        for row in 0..<chosenBoardSetting.boardHeight {
             var gridRow = [SquareButton]()
-            for col in 0..<countCols {
+            for col in 0..<chosenBoardSetting.boardWidth {
                 // Define a grid square as a button
                 let gridSquare = SquareButton(theSquare: theBoard.board[row][col], rect: CGRect(x: col*squareWidth, y: row*squareWidth + 110, width: squareWidth, height: squareWidth), row: row, col: col)
                 gridSquare.setImage(UIImage(named: "unopened")!, forState: .Normal)

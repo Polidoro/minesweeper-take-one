@@ -40,6 +40,7 @@
 		FEC13C6B1C626C1D008D7AFC /* mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC13C511C626C1D008D7AFC /* mine@2x.png */; };
 		FEC13C6C1C626C1D008D7AFC /* unopened.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC13C521C626C1D008D7AFC /* unopened.png */; };
 		FEC13C6D1C626C1D008D7AFC /* unopened@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEC13C531C626C1D008D7AFC /* unopened@2x.png */; };
+		FEC13C6F1C63E1FC008D7AFC /* BoardSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC13C6E1C63E1FC008D7AFC /* BoardSetting.swift */; };
 		FEE07C191C31F3FD009CE46A /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE07C181C31F3FD009CE46A /* SquareButton.swift */; };
 		FEE686F21C2FC851009116F4 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE686F11C2FC851009116F4 /* BoardViewController.swift */; };
 		FEE686F41C30542A009116F4 /* Minesweeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE686F31C30542A009116F4 /* Minesweeper.swift */; };
@@ -82,6 +83,7 @@
 		FEC13C511C626C1D008D7AFC /* mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mine@2x.png"; path = "Images/mine@2x.png"; sourceTree = "<group>"; };
 		FEC13C521C626C1D008D7AFC /* unopened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unopened.png; path = Images/unopened.png; sourceTree = "<group>"; };
 		FEC13C531C626C1D008D7AFC /* unopened@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unopened@2x.png"; path = "Images/unopened@2x.png"; sourceTree = "<group>"; };
+		FEC13C6E1C63E1FC008D7AFC /* BoardSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardSetting.swift; sourceTree = "<group>"; };
 		FEE07C181C31F3FD009CE46A /* SquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
 		FEE686F11C2FC851009116F4 /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		FEE686F31C30542A009116F4 /* Minesweeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Minesweeper.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				FE28DFF71C5D02AC00DE7DBD /* HighScoreViewController.swift */,
 				FEE07C181C31F3FD009CE46A /* SquareButton.swift */,
 				FEE686F31C30542A009116F4 /* Minesweeper.swift */,
+				FEC13C6E1C63E1FC008D7AFC /* BoardSetting.swift */,
 				FE456C2A1C5FD5B400C15775 /* HighScore.swift */,
 				FE059F831C2F7B2E00B7A8F8 /* Main.storyboard */,
 				FE059F861C2F7B2E00B7A8F8 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 				FE059F921C2F7B8D00B7A8F8 /* LevelViewController.swift in Sources */,
 				FEE07C191C31F3FD009CE46A /* SquareButton.swift in Sources */,
 				FE059F801C2F7B2E00B7A8F8 /* AppDelegate.swift in Sources */,
+				FEC13C6F1C63E1FC008D7AFC /* BoardSetting.swift in Sources */,
 				FE456C2B1C5FD5B400C15775 /* HighScore.swift in Sources */,
 				FEE686F21C2FC851009116F4 /* BoardViewController.swift in Sources */,
 			);

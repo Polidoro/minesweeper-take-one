@@ -59,37 +59,6 @@ class HighScore {
             let saveError = error as NSError
             print(saveError)
         }
-        
-        /*let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName("HighScores", inManagedObjectContext: managedContext)
-        
-        // Fetch a list of high scores
-        let fetchRequest = NSFetchRequest(entityName: "HighScores")
-        do {
-            let result = try managedContext.executeFetchRequest(fetchRequest)
-            
-            // If the list is empty, populate a default set of high scores (for testing purposes only)
-            if true || result.count == 0 { // TODO: Fix this conditional
-                
-                
-                let setting = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-                
-                setting.setValue(playerName, forKey: "player_name")
-                setting.setValue(1, forKey: "time")
-                setting.setValue(NSSet(object: boardType), forKeyPath: "board_type")
-
-                NSLog(setting.debugDescription)
-                
-                do {
-                    try managedContext.save()
-                } catch let error as NSError {
-                    print("Could not save \(error), \(error.userInfo)")
-                }
-            }
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }*/
     }
     
     func save() {

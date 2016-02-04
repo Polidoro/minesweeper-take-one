@@ -17,25 +17,7 @@ class LevelViewController: UITableViewController {
     // Declare segues
     let HighScoreSegue = "HighScoreSegue"
     let BoardSegue = "BoardSegue"
-    
-    struct BoardSetting: CustomStringConvertible {
-        var boardName: String
-        var boardWidth: Int
-        var boardHeight: Int
-        var bombCount: Int
-        
-        init(name: String, width: Int, height: Int, bombs: Int) {
-            boardName = name
-            boardWidth = width
-            boardHeight = height
-            bombCount = bombs
-        }
-        
-        var description: String {
-            return "\(boardName) - Width: \(boardWidth), Height: \(boardHeight), Bombs: \(bombCount)"
-        }
-    }
-    
+ 
     @IBAction func addGameType(sender: AnyObject) {
         title = "Blargh"
     }
@@ -182,10 +164,11 @@ class LevelViewController: UITableViewController {
             let chosenBoard = boardTypes[indexPath!.row]
             let destinationViewController = segue.destinationViewController as! BoardViewController
             
-            destinationViewController.boardName = chosenBoard.boardName
-            destinationViewController.countCols = chosenBoard.boardWidth
-            destinationViewController.countRows = chosenBoard.boardHeight
-            destinationViewController.countBombs = chosenBoard.bombCount
+            destinationViewController.chosenBoardSetting = chosenBoard
+//            destinationViewController.boardName = chosenBoard.boardName
+//            destinationViewController.countCols = chosenBoard.boardWidth
+//            destinationViewController.countRows = chosenBoard.boardHeight
+//            destinationViewController.countBombs = chosenBoard.bombCount
         }
     }
 

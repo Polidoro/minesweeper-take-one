@@ -6,7 +6,7 @@
 //  Copyright © 2015 Vincent Polidoro. All rights reserved.
 //
 
-import Foundation
+import Darwin
 
 struct Square {
     var bombsAdjacent: Int
