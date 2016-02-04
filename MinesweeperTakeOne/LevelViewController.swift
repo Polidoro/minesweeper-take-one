@@ -165,10 +165,6 @@ class LevelViewController: UITableViewController {
             let destinationViewController = segue.destinationViewController as! BoardViewController
             
             destinationViewController.chosenBoardSetting = chosenBoard
-//            destinationViewController.boardName = chosenBoard.boardName
-//            destinationViewController.countCols = chosenBoard.boardWidth
-//            destinationViewController.countRows = chosenBoard.boardHeight
-//            destinationViewController.countBombs = chosenBoard.bombCount
         }
     }
 
