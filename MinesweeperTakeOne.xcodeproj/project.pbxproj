@@ -123,8 +123,8 @@
 			children = (
 				FE059F7F1C2F7B2E00B7A8F8 /* AppDelegate.swift */,
 				FE059F911C2F7B8D00B7A8F8 /* LevelViewController.swift */,
-				FEE686F11C2FC851009116F4 /* BoardViewController.swift */,
 				FE28DFF71C5D02AC00DE7DBD /* HighScoreViewController.swift */,
+				FEE686F11C2FC851009116F4 /* BoardViewController.swift */,
 				FEE07C181C31F3FD009CE46A /* SquareButton.swift */,
 				FEE686F31C30542A009116F4 /* Minesweeper.swift */,
 				FEC13C6E1C63E1FC008D7AFC /* BoardSetting.swift */,

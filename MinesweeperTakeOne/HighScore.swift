@@ -13,13 +13,20 @@ import CoreData
 class HighScore {
     var playerName: String
     var boardType: Board
-    var dateCreated: NSDate
+    var dateCreated: Int
     
-    init(theScoreId: Int) {
-        playerName = "Hello"
-        boardType = Board(width: 0, height: 0, bombs: 0)
-        dateCreated = NSDate()
+    init(highScoreName: String, highScoreDate: Int, highScoreBoardType: Board) {
+        playerName = highScoreName
+        boardType = highScoreBoardType
+        dateCreated = highScoreDate
     }
+    
+    init(highScoreName: String, highScoreDate: Int) {
+        playerName = highScoreName
+        boardType = Board(width: 0, height: 0, bombs: 0)
+        dateCreated = highScoreDate
+    }
+
 
     func populateDefaults() {
         // Create Managed Object
@@ -44,13 +51,9 @@ class HighScore {
         entityDescription = NSEntityDescription.entityForName("HighScores", inManagedObjectContext: managedContext)
         let newHighScore = NSManagedObject(entity: entityDescription!, insertIntoManagedObjectContext: managedContext)
         
-        // Configure New Person
+        // Configure New High Score
         newHighScore.setValue(1, forKey: "time")
         newHighScore.setValue("PlayerName", forKey: "player_name")
-        
-        NSLog(newBoardType.debugDescription)
-        
-        NSLog(NSStringFromClass(newBoardType.classForCoder))
         newHighScore.setValue (newBoardType, forKey: "board_type")
         
         do {
