@@ -68,17 +68,17 @@ class Board {
     // Populate the board with bombs
     func placeBombs() {
         var bombsToPlace = UInt32(self.bombCount)
-        var totalSquares = UInt32((self.boardWidth) * (self.boardHeight))
+        var remainingSquares = UInt32((self.boardWidth) * (self.boardHeight))
         
         // Decide if there should be a bomb on the square
         for row in 0..<boardHeight {
             for col in 0..<boardWidth {
-                let bombRandomizer = arc4random_uniform(UInt32(totalSquares))+1
+                let bombRandomizer = arc4random_uniform(remainingSquares)+1
                 if bombRandomizer <= bombsToPlace {
                     board[row][col].isBomb = true
                     bombsToPlace--
                 }
-                totalSquares--
+                remainingSquares--
             }
         }
     }
